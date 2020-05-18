@@ -25,7 +25,9 @@
                         {{ object.get_like_count }} like{% if object.get_like_count > 1 %}s{% endif %}
                     {% endif %}
                 </div>
-                
+                <div class="timestamp">
+                    {{ object.posted_on|timesince }}
+                </div>
             </div>
             <ul class="comment-list">
                 {% for comment in object.comments.all %}

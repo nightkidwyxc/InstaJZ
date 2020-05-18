@@ -16,7 +16,9 @@
                             {% endif %}
                             {{ post.author.username }}
                         </a>
-                        
+                        <span class="poster__timestamp">
+                            {{ post.posted_on|timesince }}
+                        </span>
                     </div>
                 </div> 
                 <a href="{% url 'post_detail' post.pk %}">
